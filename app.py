@@ -25,6 +25,9 @@ input_data = pd.DataFrame({
 })
 
 # Prediction
-if st.button("Predict Math Score"):
-    prediction = model.predict(input_data)
-    st.success(f"Predicted Math Score: {round(prediction[0], 2)}")
+input_data = pd.DataFrame({
+    'reading score': [reading_score],
+    'writing score': [writing_score]
+})
+
+prediction = model.predict(input_data)
