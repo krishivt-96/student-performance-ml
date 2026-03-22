@@ -25,9 +25,27 @@ input_data = pd.DataFrame({
 })
 
 # Prediction
-input_data = pd.DataFrame({
-    'reading score': [reading_score],
-    'writing score': [writing_score]
-})
+import pandas as pd
 
+# Create full input with ALL features (same as training)
+input_data = pd.DataFrame(columns=model.feature_names_in_)
+
+# Fill all with 0
+input_data.loc[0] = 0
+
+# Fill actual values
+input_data.loc[0, 'reading score'] = reading_score
+input_data.loc[0, 'writing score'] = writing_score
+
+# Example encoding (you can expand later)
+if gender == "male":
+    input_data.loc[0, 'gender_male'] = 1
+
+if lunch == "standard":
+    input_data.loc[0, 'lunch_standard'] = 1
+
+if test_prep == "none":
+    input_data.loc[0, 'test preparation course_none'] = 1
+
+# Predict
 prediction = model.predict(input_data)
