@@ -22,3 +22,9 @@ streamlit run app.py
 
 ## 🌐 Live Demo
 https://your-app.streamlit.app
+
+## 📌 Features
+- Predict student math score
+- Uses Random Forest ML model
+- Interactive UI with Streamlit
+- Deployed on cloud
