@@ -1,10 +1,10 @@
 import streamlit as st
-import pickle
+import joblib
 import pandas as pd
 
 # Load model
 with open("model.pkl", "rb") as f:
-    model = pickle.load(f)
+    model = joblib.load(f)
 
 st.title("🎓 Student Performance Predictor")
 
