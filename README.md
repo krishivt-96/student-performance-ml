@@ -19,3 +19,6 @@ A Machine Learning web application that predicts student math scores based on de
 ```bash
 pip install -r requirements.txt
 streamlit run app.py
+
+## 🌐 Live Demo
+https://your-app.streamlit.app
